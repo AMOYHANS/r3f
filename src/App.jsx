@@ -1,20 +1,33 @@
 import {Canvas} from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import { Physics } from "@react-three/cannon";
+import World from './World';
 
 const cameraSettings = {
   fov: 45,
   near: 0.1,
   far: 100,
+  position: [0, 3, 5]
 }
 function App() {
+
   return (
-    <Canvas orthographic={false} camera={cameraSettings}>
-      <OrbitControls/>
-      <mesh>
-        <planeGeometry args={[20, 20]}/>
-        <meshBasicMaterial/>
-      </mesh>
+    <>
+    <Canvas flat orthographic={false} camera={cameraSettings}>
+      <color args={["#45454b"]} attach="background"/>
+      <Physics
+        broadphase='SAPBroadphase'
+        gravity={[0, -4.82, 0]}
+      >
+        {/* <Debug>
+        </Debug> */}
+          <World/>
+      </Physics>
     </Canvas>
+      <div className="controls">
+      <p>WASD移动</p>
+      <p>K切换视角</p>
+      </div>
+    </>
   )
 }
 

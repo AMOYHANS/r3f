@@ -2,6 +2,18 @@ body,
 #root,
 canvas{
   margin: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
+}
+
+canvas{
+  z-index: -1;
+}
+
+.controls{
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  /* z-index: 1; */
 }

@@ -6,5 +6,9 @@ import './index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
+    <div className="controls">
+      <p>WASD移动</p>
+      <p>K切换视角</p>
+    </div>
   </React.StrictMode>,
 )

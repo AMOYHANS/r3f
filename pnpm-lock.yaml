@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@react-three/cannon':
+    specifier: ^6.6.0
+    version: 6.6.0(@react-three/fiber@8.15.19)(react@18.2.0)(three@0.162.0)
   '@react-three/drei':
     specifier: ^9.101.0
     version: 9.101.0(@react-three/fiber@8.15.19)(@types/react@18.2.65)(@types/three@0.162.0)(react-dom@18.2.0)(react@18.2.0)(three@0.162.0)
@@ -632,6 +635,14 @@ packages:
       fastq: 1.17.1
     dev: true
 
+  /@pmndrs/cannon-worker-api@2.4.0(three@0.162.0):
+    resolution: {integrity: sha512-oJA1Bboc+WObksRaGDKJG0Wna9Q75xi1MdXVAZ9qXzBOyPsadmAnrmiKOEF0R8v/4zsuJElvscNZmyo3msbZjA==, tarball: https://registry.npmmirror.com/@pmndrs/cannon-worker-api/-/cannon-worker-api-2.4.0.tgz}
+    peerDependencies:
+      three: '>=0.139'
+    dependencies:
+      three: 0.162.0
+    dev: false
+
   /@radix-ui/primitive@1.0.1:
     resolution: {integrity: sha512-yQ8oGX2GVsEYMWGxcovu1uGWPCxV5BFfeeYxqPmuAzUyLT9qmaMXSAhXpb0WrspIeqYzdJpkh2vHModJPgRIaw==, tarball: https://registry.npmmirror.com/@radix-ui/primitive/-/primitive-1.0.1.tgz}
     dependencies:
@@ -1037,6 +1048,23 @@ packages:
 
   /@react-spring/types@9.6.1:
     resolution: {integrity: sha512-POu8Mk0hIU3lRXB3bGIGe4VHIwwDsQyoD1F394OK7STTiX9w4dG3cTLljjYswkQN+hDSHRrj4O36kuVa7KPU8Q==, tarball: https://registry.npmmirror.com/@react-spring/types/-/types-9.6.1.tgz}
+    dev: false
+
+  /@react-three/cannon@6.6.0(@react-three/fiber@8.15.19)(react@18.2.0)(three@0.162.0):
+    resolution: {integrity: sha512-lP9rJoVHQi0w+dYF8FJAm2xr5eLfNEckb04j72kjqndUkuOPr26N4rSBhQbHl5b5N3tEnhQaIMungAvHkcY8/A==, tarball: https://registry.npmmirror.com/@react-three/cannon/-/cannon-6.6.0.tgz}
+    peerDependencies:
+      '@react-three/fiber': '>=8'
+      react: '>=18'
+      three: '>=0.139'
+    dependencies:
+      '@pmndrs/cannon-worker-api': 2.4.0(three@0.162.0)
+      '@react-three/fiber': 8.15.19(react-dom@18.2.0)(react@18.2.0)(three@0.162.0)
+      cannon-es: 0.20.0
+      cannon-es-debugger: 1.0.0(cannon-es@0.20.0)(three@0.162.0)
+      react: 18.2.0
+      three: 0.162.0
+    transitivePeerDependencies:
+      - typescript
     dev: false
 
   /@react-three/drei@9.101.0(@react-three/fiber@8.15.19)(@types/react@18.2.65)(@types/three@0.162.0)(react-dom@18.2.0)(react@18.2.0)(three@0.162.0):
@@ -1583,6 +1611,24 @@ packages:
   /caniuse-lite@1.0.30001597:
     resolution: {integrity: sha512-7LjJvmQU6Sj7bL0j5b5WY/3n7utXUJvAe1lxhsHDbLmwX9mdL86Yjtr+5SRCyf8qME4M7pU2hswj0FpyBVCv9w==, tarball: https://registry.npmmirror.com/caniuse-lite/-/caniuse-lite-1.0.30001597.tgz}
     dev: true
+
+  /cannon-es-debugger@1.0.0(cannon-es@0.20.0)(three@0.162.0):
+    resolution: {integrity: sha512-sE9lDOBAYFKlh+0w+cvWKwUhJef8HYnUSVPWPL0jD15MAuVRQKno4QYZSGxgOoJkMR3mQqxL4bxys2b3RSWH8g==, tarball: https://registry.npmmirror.com/cannon-es-debugger/-/cannon-es-debugger-1.0.0.tgz}
+    peerDependencies:
+      cannon-es: 0.x
+      three: 0.x
+      typescript: '>=3.8'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      cannon-es: 0.20.0
+      three: 0.162.0
+    dev: false
+
+  /cannon-es@0.20.0:
+    resolution: {integrity: sha512-eZhWTZIkFOnMAJOgfXJa9+b3kVlvG+FX4mdkpePev/w/rP5V8NRquGyEozcjPfEoXUlb+p7d9SUcmDSn14prOA==, tarball: https://registry.npmmirror.com/cannon-es/-/cannon-es-0.20.0.tgz}
+    dev: false
 
   /chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==, tarball: https://registry.npmmirror.com/chalk/-/chalk-2.4.2.tgz}
