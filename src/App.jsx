@@ -1,19 +1,16 @@
 import {Canvas} from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
+import Model from './Model'
+import { Suspense } from 'react'
 
-const cameraSettings = {
-  fov: 45,
-  near: 0.1,
-  far: 100,
-}
 function App() {
   return (
-    <Canvas orthographic={false} camera={cameraSettings}>
+    <Canvas flat>
+      <color args={["#202920"]} attach="background"/>
       <OrbitControls/>
-      <mesh>
-        <planeGeometry args={[20, 20]}/>
-        <meshBasicMaterial/>
-      </mesh>
+      <Suspense fallback={null}>
+      <Model/>
+      </Suspense>
     </Canvas>
   )
 }
