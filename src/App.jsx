@@ -7,6 +7,7 @@ function App() {
   return (
     <Canvas flat>
       <color args={["#202920"]} attach="background"/>
+      <ambientLight/>
       <OrbitControls/>
       <Suspense fallback={null}>
       <Model/>

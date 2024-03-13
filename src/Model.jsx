@@ -45,11 +45,13 @@ export default function Model(props) {
       >
         <meshBasicMaterial map={texture} map-flipY={false}/>
       </mesh>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position-y={-0.01}>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position-y={0.01}>
         <planeGeometry
             args={[10, 10]} 
         />
-        <MeshReflectorMaterial/>
+        <MeshReflectorMaterial
+        color={"#f6fa0c"}
+        />
       </mesh>
     </group>
   );
